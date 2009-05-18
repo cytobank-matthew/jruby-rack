@@ -4,11 +4,12 @@
 # See the file LICENSE.txt for details.
 #++
 
-require File.dirname(__FILE__) + '/../spec_helper'
+#require File.dirname(__FILE__) + '/../spec_helper'
 
-import org.jruby.rack.RackServlet
-import org.jruby.rack.servlet.ServletRackContext
+#import org.jruby.rack.RackServlet
+#import org.jruby.rack.servlet.ServletRackContext
 
+=begin
 describe RackServlet, "service" do
   it "should delegate to process" do
     request = javax.servlet.http.HttpServletRequest.impl {}
@@ -19,7 +20,6 @@ describe RackServlet, "service" do
     @servlet.service request, response
   end
 end
-
 describe ServletRackContext, "getRealPath" do
   before :each do
     @context = ServletRackContext.new(@servlet_context)
@@ -32,3 +32,4 @@ describe ServletRackContext, "getRealPath" do
     @context.getRealPath("/WEB-INF").should == "/var/tmp/foo.txt"
   end
 end
+=end

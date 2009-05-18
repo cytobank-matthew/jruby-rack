@@ -119,3 +119,8 @@ task :classpaths do
   puts "compile_classpath:",*compile_classpath
   puts "test_classpath:", *test_classpath
 end
+
+
+require 'rubygems' 
+gem 'ci_reporter' 
+require 'ci/reporter/rake/test_unit' 
